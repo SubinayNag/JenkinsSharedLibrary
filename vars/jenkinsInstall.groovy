@@ -1,6 +1,6 @@
 def playbook(String inventory, String rolePath) {
     echo "Execute Ansible role..."
-    def shellCommand = "ansible-playbook -i  ${inventory} --role  ${rolePath}"
+    def shellCommand = "ansible-playbook -i  ${inventory} ${rolePath}"
     echo "Command is: ${shellCommand}"
     sh(shellCommand)
 }
