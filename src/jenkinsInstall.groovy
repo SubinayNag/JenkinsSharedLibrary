@@ -11,7 +11,7 @@ def gitClone(String url) {
 	echo "Executing Git Clone to download Jenkins Installation ansible role"
 	//echo "${url}"
 	def path = "dir"
-	path.execute()
+	bat(path)
 	//def shellCommand = "git clone --branch=master ${url}".execute();
 	echo "Command is: ${shellCommand}"
     	//sh(shellCommand)
