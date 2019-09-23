@@ -1,7 +1,7 @@
 def playbook(String inventory, String rolePath) {
     echo "Execute Ansible role..."
-    def path = "pwd"
-    //sh(path)
+    def path = "dir"
+    bat(path)
     def shellCommand = "ansible-playbook -i  ${inventory} --role  ${rolePath}"
     echo "Command is: ${shellCommand}"
     
@@ -9,10 +9,8 @@ def playbook(String inventory, String rolePath) {
 }
 def gitClone(String url) {
 	echo "Executing Git Clone to download Jenkins Installation ansible role"
-	//echo "${url}"
-	def path = "dir"
-	bat(path)
-	//def shellCommand = "git clone --branch=master ${url}".execute();
+	echo "${url}"
+	def shellCommand = "git clone --branch=master ${url}"
 	echo "Command is: ${shellCommand}"
-    	//sh(shellCommand)
+    	bat(shellCommand)
 }
