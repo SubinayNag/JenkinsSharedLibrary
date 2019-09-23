@@ -10,8 +10,7 @@ def playbook(String inventory, String rolePath) {
 def gitClone(String url) {
 	echo "Executing Git Clone to download Jenkins Installation ansible role"
 	//echo "${url}"
-	def shellCommand = "git clone --branch=master ${url}"
+	def shellCommand = "git clone --branch=master ${url}".execute();
 	echo "Command is: ${shellCommand}"
-	shellCommand.execute()
     	//sh(shellCommand)
 }
